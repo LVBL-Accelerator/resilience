@@ -1,0 +1,98 @@
+{
+ "tag": "r001",
+ "root": "resilience.mapunity.com",
+ "files": {
+  "index.html": [
+   "96016d5f6e9e98eb2cb7a6be92e22e2e12436a3ef509f20e6d5ae58f68cd69e7",
+   904071
+  ],
+  "events/akvan.html": [
+   "908128754843b9a91a8603f67730b9733c5593f36cd7ccd41b0e44f1ea692781",
+   281140
+  ],
+  "events/murasu.html": [
+   "362d5f7800de680f42130c212eb9311aabee69428456907f0d5d883546fa9d13",
+   274137
+  ],
+  "events/arnab.html": [
+   "494e1e9d2a7a6d821249f12ebd5fe7d1ce59ce444baee4027b76af591e571088",
+   273593
+  ],
+  "events/el-nino.html": [
+   "9ba1d7554db467fd9da0e526b8d4820ee25649821a3ef4b94dadb73f6d0c763e",
+   74110
+  ],
+  "tools/fetch_position.py": [
+   "0a0f43cb9b3e228e40ceeed91705b906e6232057c9cd3ca8f06c480cd890cea9",
+   14170
+  ],
+  "tools/README.md": [
+   "9cf14b6769a92e546bf5a89ff0c726b1814ec5f6864ea33015c57ec39631246e",
+   7988
+  ],
+  "tools/export_track.py": [
+   "41b426b5f05bc35dabca9d5a70cca2f2c3e23556abc3ff303340e989f9c6f985",
+   1995
+  ],
+  "tools/fetch_image.py": [
+   "fc4b291f0d190ecacc378aa61dd91804fc88e63dec8d30b81cee1cfc86d82f3d",
+   5151
+  ],
+  "tools/set_event.py": [
+   "f488526a61e20a4faa99647f1fdbd5a057c1c633d947cdd2bf787922b95f057c",
+   3173
+  ],
+  "tools/postevent.py": [
+   "2370c7ae4bbf4460f36be7411bfabc13efd9d7e8765d37a22b1ee57c6a86f091",
+   2720
+  ],
+  "data/active.json": [
+   "8c8a6d8a1a73caef00f255f9c93f67aaad7f6c918fa34b1d49b495a78d4f5993",
+   109
+  ],
+  "data/observations.json": [
+   "3985d7c8e723254815dc322cb811aa46ae9ac223ed5eb16efc1522fbd9fff8cf",
+   6917
+  ],
+  "data/akvan-track.csv": [
+   "c1d0b1ebb1897d785f73219d464436b081b8425d050ac78e640708d521b2fcb3",
+   3683
+  ],
+  "data/event.json": [
+   "16c03c658bab9caa9562e7039fbdcaecff9cef8118ef585d93b17ee30b7fbdca",
+   391
+  ],
+  "data/akvan-postevent.json": [
+   "c024542c5de282800c0648e97b2573cc9b5185c561196f0cfaa91cbe54916cca",
+   60
+  ],
+  "data/satellite/bay-2026-11-16.jpg": [
+   "e6c4e7fba2fa83d8638c5441847654d93886ba022e0290c38998c94417e78bf0",
+   152450
+  ],
+  "data/satellite/bay-2026-11-16-viirs.jpg": [
+   "f194aaabf44f9471c80a49851ea916b3da93e08586fcfbbfe722eb989f889318",
+   168284
+  ],
+  "data/satellite/bay-2026-11-16-ir.jpg": [
+   "2ba77745f8f3d81782574571f390f40cce7914db84e4e3198e793385e24821ec",
+   116218
+  ],
+  "data/satellite/bay-2026-11-17-insat-ir.jpg": [
+   "06cec599d7f2d25670d41c1d87c31382a6763b12e876f287a2a49b17d50e07bc",
+   162525
+  ],
+  "data/satellite/latest.json": [
+   "5f77cd4c22613771c1350911c9ad2eea90fad7bf96c921155cbe8d239bc26755",
+   206
+  ],
+  "data/satellite/bay-2026-11-18-insat-ir.jpg": [
+   "f180d1d67aa18627f568970c80202c53a790f63107a260d2d18ec2411292638a",
+   163755
+  ],
+  "logos/resilience-mark.svg": [
+   "8bc6ed5e9cfba0bfe287d540bdf0580ba5423a11ea286da12e49cb8329898437",
+   499
+  ]
+ }
+}

@@ -1,0 +1,189 @@
+{
+ "event": "akvan",
+ "status": "live",
+ "observations": [
+  {
+   "lat": 9.0,
+   "lon": 86.9,
+   "issue": "2026-11-15T05:30:00+05:30",
+   "intensity": "Depression",
+   "fetched": "2026-11-15T12:00:00+05:30"
+  },
+  {
+   "lat": 9.3,
+   "lon": 86.9,
+   "issue": "2026-11-15T08:30:00+05:30",
+   "intensity": "Depression",
+   "fetched": "2026-11-15T12:00:00+05:30"
+  },
+  {
+   "lat": 9.8,
+   "lon": 86.8,
+   "issue": "2026-11-15T11:30:00+05:30",
+   "intensity": "Depression",
+   "fetched": "2026-11-15T17:30:00+05:30"
+  },
+  {
+   "lat": 10.6,
+   "lon": 86.7,
+   "issue": "2026-11-15T23:30:00+05:30",
+   "intensity": "Deep depression",
+   "fetched": "2026-11-16T06:24:55+05:30",
+   "where": "640 km east-northeast of Trincomalee, 670 km west of Sri Vijaya Puram, 760 km east-southeast of Chennai, 870 km south-southeast of Visakhapatnam"
+  },
+  {
+   "lat": 11.0,
+   "lon": 86.5,
+   "issue": "2026-11-16T05:30:00+05:30",
+   "intensity": "Deep depression",
+   "fetched": "2026-11-16T19:55:00+05:30",
+   "where": "630 km east-northeast of Trincomalee, 720 km east-southeast of Chennai, 820 km south-southeast of Visakhapatnam, 940 km south of Gopalpur",
+   "movement": "north-north-west at 8 kmph"
+  },
+  {
+   "lat": 11.2,
+   "lon": 86.4,
+   "issue": "2026-11-16T08:30:00+05:30",
+   "intensity": "Deep depression",
+   "fetched": "2026-11-16T19:35:00+05:30",
+   "where": "630 km east-northeast of Trincomalee, 690 km west of Sri Vijaya Puram, 700 km east-southeast of Chennai, 800 km south-southeast of Visakhapatnam, 910 km south of Gopalpur",
+   "movement": "north-north-west at 6 kmph"
+  },
+  {
+   "lat": 11.7,
+   "lon": 86.0,
+   "issue": "2026-11-16T11:30:00+05:30",
+   "intensity": "Deep depression",
+   "fetched": "2026-11-16T19:55:00+05:30",
+   "movement": "north-north-west at 17 kmph"
+  },
+  {
+   "lat": 12.2,
+   "lon": 85.7,
+   "issue": "2026-11-16T17:30:00+05:30",
+   "intensity": "Cyclonic storm Akvan",
+   "fetched": "2026-11-16T19:55:00+05:30",
+   "where": "610 km east of Chennai, 630 km north-east of Trincomalee, 660 km south-east of Machilipatnam, 670 km south-southeast of Visakhapatnam, 790 km south of Gopalpur",
+   "movement": "north-north-west at 10 kmph"
+  },
+  {
+   "lat": 12.1,
+   "lon": 85.8,
+   "issue": "2026-11-17T00:00:00+05:30",
+   "intensity": "Cyclonic storm Akvan",
+   "fetched": "2026-11-17T07:55:00+05:30",
+   "source": "Bangladesh Meteorological Department, special bulletin of 17 November 2026 (midnight fix)",
+   "movement": "nearly stationary",
+   "where": "1,305 km south-west of Chittagong, 1,245 km south-west of Cox's Bazar, 1,225 km south-west of Mongla, 1,205 km south-west of Payra; winds 62 kmph gusting 88 near the centre"
+  },
+  {
+   "lat": 12.2,
+   "lon": 85.7,
+   "issue": "2026-11-17T02:30:00+05:30",
+   "intensity": "Cyclonic storm Akvan",
+   "fetched": "2026-11-17T12:35:00+05:30",
+   "source": "IMD National Bulletin, 02:30 IST",
+   "movement": "practically stationary during the previous nine hours",
+   "where": "610 km east of Chennai, 630 km north-east of Trincomalee, 660 km south-east of Machilipatnam, 670 km south-southeast of Visakhapatnam, 790 km south of Gopalpur"
+  },
+  {
+   "lat": 12.2,
+   "lon": 85.7,
+   "issue": "2026-11-17T05:30:00+05:30",
+   "intensity": "Cyclonic storm Akvan",
+   "fetched": "2026-11-17T10:15:00+05:30",
+   "source": "IMD bulletin, 05:30 IST",
+   "movement": "practically stationary since 17:30 on the 16th",
+   "where": "790 km south of Gopalpur; 610 km east of Chennai, 660 km south-east of Machilipatnam, 670 km south-southeast of Visakhapatnam"
+  },
+  {
+   "lat": 12.2,
+   "lon": 85.7,
+   "issue": "2026-11-17T08:30:00+05:30",
+   "intensity": "Cyclonic storm Akvan",
+   "source": "IMD Meteorological Centre, Bhubaneswar",
+   "movement": "north-north-west at 3 kmph",
+   "where": "610 km east of Chennai, 630 km north-east of Trincomalee, 660 km south-east of Machilipatnam, 670 km south-southeast of Visakhapatnam, 790 km south of Gopalpur",
+   "fetched": "2026-11-18T05:58:00+05:30"
+  },
+  {
+   "lat": 12.3,
+   "lon": 85.7,
+   "issue": "2026-11-17T11:30:00+05:30",
+   "intensity": "Cyclonic storm Akvan",
+   "source": "IMD National Bulletin 15",
+   "movement": "slowly northwards at about 3 kmph",
+   "where": "600 km east of Chennai, 650 km south-east of Machilipatnam, 660 km south-southeast of Visakhapatnam, 780 km south of Gopalpur",
+   "fetched": "2026-11-18T05:58:00+05:30"
+  },
+  {
+   "lat": 12.3,
+   "lon": 85.6,
+   "issue": "2026-11-17T14:30:00+05:30",
+   "intensity": "Cyclonic storm Akvan",
+   "source": "IMD bulletin, 14:30 IST",
+   "movement": "north-north-west at 3 kmph",
+   "where": "590 km east of Chennai, 630 km north-east of Trincomalee, 650 km south-east of Machilipatnam, 650 km south-southeast of Visakhapatnam, 780 km south of Gopalpur",
+   "fetched": "2026-11-18T05:58:00+05:30"
+  },
+  {
+   "lat": 12.4,
+   "lon": 85.6,
+   "issue": "2026-11-17T20:30:00+05:30",
+   "intensity": "Cyclonic storm Akvan",
+   "fetched": "2026-11-18T05:58:00+05:30",
+   "source": "IMD National Bulletin 18, issued 22:30 IST",
+   "movement": "north-north-west at 3 kmph",
+   "where": "590 km east of Chennai, 640 km south-east of Machilipatnam, 640 km south-southeast of Visakhapatnam, 770 km south of Gopalpur"
+  },
+  {
+   "lat": 12.5,
+   "lon": 85.6,
+   "issue": "2026-11-17T23:30:00+05:30",
+   "intensity": "Cyclonic storm Akvan",
+   "source": "IMD bulletin, 23:30 IST",
+   "movement": "northwards at 3 kmph",
+   "where": "590 km east of Chennai, 640 km north-east of Trincomalee, 630 km south-east of Machilipatnam, 630 km south-southeast of Visakhapatnam, 760 km south of Gopalpur",
+   "fetched": "2026-11-18T09:02:00+05:30"
+  },
+  {
+   "lat": 12.6,
+   "lon": 85.6,
+   "issue": "2026-11-18T02:30:00+05:30",
+   "intensity": "Cyclonic storm Akvan",
+   "source": "IMD bulletin, 02:30 IST, quoted by the Sri Lanka met service",
+   "movement": "slowly north-north-west",
+   "where": "about 650 km from Trincomalee",
+   "fetched": "2026-11-18T09:02:00+05:30"
+  },
+  {
+   "lat": 12.7,
+   "lon": 85.5,
+   "issue": "2026-11-18T05:30:00+05:30",
+   "intensity": "Severe cyclonic storm Akvan",
+   "source": "IMD bulletin, 05:30 IST",
+   "movement": "north-north-west at 3 kmph",
+   "where": "580 km east of Chennai, 610 km south-east of Machilipatnam, 610 km south-southeast of Visakhapatnam, 730 km south of Gopalpur",
+   "fetched": "2026-11-18T11:32:00+05:30"
+  }
+ ],
+ "rejected": [
+  {
+   "issue": "2026-11-16T11:30:00+05:30",
+   "lat": 11.0,
+   "lon": 86.6,
+   "intensity": "Cyclonic storm (reported)",
+   "why": "reported by one secondary source only; it places the centre south-east of the 08:30 fix, which contradicts the north-north-west motion IMD describes, so it is not plotted",
+   "seen": "2026-11-16T19:45:00+05:30",
+   "source": "secondary news report quoting the national bulletin",
+   "resolution": "this is the 05:30 fix (11.0N 86.5E) reported against the 11:30 time by one outlet; the 11:30 fix is 11.7N 86.0E"
+  }
+ ],
+ "named": {
+  "at": "2026-11-16T17:30:00+05:30",
+  "name": "Akvan",
+  "note": "IMD named the system a cyclonic storm at the 17:30 bulletin on 16 November"
+ },
+ "last_checked": "2026-11-18T11:32:00+05:30",
+ "last_checked_note": "05:30 fix in, and IMD has called it a severe cyclonic storm; the landfall intensity has been scaled back to 100-110 kmph gusting 120"
+}

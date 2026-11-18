@@ -1,0 +1,19 @@
+issue_ist,lat,lon,intensity,movement,where,fetched
+2026-11-15T05:30:00+05:30,9.0,86.9,Depression,,,2026-11-15T12:00:00+05:30
+2026-11-15T08:30:00+05:30,9.3,86.9,Depression,,,2026-11-15T12:00:00+05:30
+2026-11-15T11:30:00+05:30,9.8,86.8,Depression,,,2026-11-15T17:30:00+05:30
+2026-11-15T23:30:00+05:30,10.6,86.7,Deep depression,,"640 km east-northeast of Trincomalee, 670 km west of Sri Vijaya Puram, 760 km east-southeast of Chennai, 870 km south-southeast of Visakhapatnam",2026-11-16T06:24:55+05:30
+2026-11-16T05:30:00+05:30,11.0,86.5,Deep depression,north-north-west at 8 kmph,"630 km east-northeast of Trincomalee, 720 km east-southeast of Chennai, 820 km south-southeast of Visakhapatnam, 940 km south of Gopalpur",2026-11-16T19:55:00+05:30
+2026-11-16T08:30:00+05:30,11.2,86.4,Deep depression,north-north-west at 6 kmph,"630 km east-northeast of Trincomalee, 690 km west of Sri Vijaya Puram, 700 km east-southeast of Chennai, 800 km south-southeast of Visakhapatnam, 910 km south of Gopalpur",2026-11-16T19:35:00+05:30
+2026-11-16T11:30:00+05:30,11.7,86.0,Deep depression,north-north-west at 17 kmph,,2026-11-16T19:55:00+05:30
+2026-11-16T17:30:00+05:30,12.2,85.7,Cyclonic storm Akvan,north-north-west at 10 kmph,"610 km east of Chennai, 630 km north-east of Trincomalee, 660 km south-east of Machilipatnam, 670 km south-southeast of Visakhapatnam, 790 km south of Gopalpur",2026-11-16T19:55:00+05:30
+2026-11-17T00:00:00+05:30,12.1,85.8,Cyclonic storm Akvan,nearly stationary,"1,305 km south-west of Chittagong, 1,245 km south-west of Cox's Bazar, 1,225 km south-west of Mongla, 1,205 km south-west of Payra; winds 62 kmph gusting 88 near the centre",2026-11-17T07:55:00+05:30
+2026-11-17T02:30:00+05:30,12.2,85.7,Cyclonic storm Akvan,practically stationary during the previous nine hours,"610 km east of Chennai, 630 km north-east of Trincomalee, 660 km south-east of Machilipatnam, 670 km south-southeast of Visakhapatnam, 790 km south of Gopalpur",2026-11-17T12:35:00+05:30
+2026-11-17T05:30:00+05:30,12.2,85.7,Cyclonic storm Akvan,practically stationary since 17:30 on the 16th,"790 km south of Gopalpur; 610 km east of Chennai, 660 km south-east of Machilipatnam, 670 km south-southeast of Visakhapatnam",2026-11-17T10:15:00+05:30
+2026-11-17T08:30:00+05:30,12.2,85.7,Cyclonic storm Akvan,north-north-west at 3 kmph,"610 km east of Chennai, 630 km north-east of Trincomalee, 660 km south-east of Machilipatnam, 670 km south-southeast of Visakhapatnam, 790 km south of Gopalpur",2026-11-18T05:58:00+05:30
+2026-11-17T11:30:00+05:30,12.3,85.7,Cyclonic storm Akvan,slowly northwards at about 3 kmph,"600 km east of Chennai, 650 km south-east of Machilipatnam, 660 km south-southeast of Visakhapatnam, 780 km south of Gopalpur",2026-11-18T05:58:00+05:30
+2026-11-17T14:30:00+05:30,12.3,85.6,Cyclonic storm Akvan,north-north-west at 3 kmph,"590 km east of Chennai, 630 km north-east of Trincomalee, 650 km south-east of Machilipatnam, 650 km south-southeast of Visakhapatnam, 780 km south of Gopalpur",2026-11-18T05:58:00+05:30
+2026-11-17T20:30:00+05:30,12.4,85.6,Cyclonic storm Akvan,north-north-west at 3 kmph,"590 km east of Chennai, 640 km south-east of Machilipatnam, 640 km south-southeast of Visakhapatnam, 770 km south of Gopalpur",2026-11-18T05:58:00+05:30
+2026-11-17T23:30:00+05:30,12.5,85.6,Cyclonic storm Akvan,northwards at 3 kmph,"590 km east of Chennai, 640 km north-east of Trincomalee, 630 km south-east of Machilipatnam, 630 km south-southeast of Visakhapatnam, 760 km south of Gopalpur",2026-11-18T09:02:00+05:30
+2026-11-18T02:30:00+05:30,12.6,85.6,Cyclonic storm Akvan,slowly north-north-west,about 650 km from Trincomalee,2026-11-18T09:02:00+05:30
+2026-11-18T05:30:00+05:30,12.7,85.5,Severe cyclonic storm Akvan,north-north-west at 3 kmph,"580 km east of Chennai, 610 km south-east of Machilipatnam, 610 km south-southeast of Visakhapatnam, 730 km south of Gopalpur",2026-11-18T11:32:00+05:30

@@ -1,0 +1,14 @@
+{
+  "event": "akvan",
+  "designation": "BOB/10/2026",
+  "name": "Akvan",
+  "descriptor": "Severe Cyclonic Storm",
+  "status": "live",
+  "since": "2026-11-15",
+  "since_label": "since 15 November 2026",
+  "states": "Andhra Pradesh, Odisha, West Bengal",
+  "page": "events/akvan.html",
+  "title": "Cyclone Akvan",
+  "note": "severe since 05:30 on 18 November",
+  "updated": "2026-11-18T11:33:16+05:30"
+}

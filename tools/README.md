@@ -1,0 +1,186 @@
+# Poller for the Akvan event page
+
+`fetch_position.py` reads the cyclone bulletin, records the observed position,
+and redraws the marker, the past dots and the observed track in
+`resilience.html`. Standard library only, no state outside this folder.
+
+## Running it by hand
+
+```bash
+python3 fetch_position.py --status       # what it holds, and how old
+python3 fetch_position.py                # fetch if the interval has passed
+python3 fetch_position.py --force        # fetch now regardless
+python3 fetch_position.py --dry-run      # parse and report, write nothing
+python3 fetch_position.py --fixture f.txt  # parse a saved bulletin
+```
+
+Exit codes: `0` fine or not due, `2` nothing fetchable, `3` fetched but not
+parseable, `4` event ended, `5` bad path.
+
+## On a server
+
+Cron, every ten minutes, letting the script decide whether it is due. It only
+fetches once the last observation is 90 minutes old, so the interval lives in
+one place rather than in the schedule.
+
+```cron
+*/10 * * * * cd /srv/resilience/tools && /usr/bin/python3 fetch_position.py >> /var/log/resilience-poller.log 2>&1
+```
+
+Systemd, if you would rather have the journal:
+
+```ini
+# /etc/systemd/system/resilience-poller.service
+[Unit]
+Description=Resilience cyclone position poller
+
+[Service]
+Type=oneshot
+WorkingDirectory=/srv/resilience/tools
+ExecStart=/usr/bin/python3 fetch_position.py
+```
+
+```ini
+# /etc/systemd/system/resilience-poller.timer
+[Unit]
+Description=Run the resilience poller every ten minutes
+
+[Timer]
+OnBootSec=2min
+OnUnitActiveSec=10min
+
+[Install]
+WantedBy=timers.target
+```
+
+```bash
+systemctl enable --now resilience-poller.timer
+journalctl -u resilience-poller -f
+```
+
+## What it will not do
+
+It will not guess. If the bulletin cannot be fetched, or the position cannot be
+parsed, it exits non-zero and leaves the page as it was, so the page shows the
+last good position and its time rather than something invented.
+
+It will not record the same bulletin twice. Observations are keyed on the
+bulletin's own issue time, not on when the run happened, so a schedule that
+fires every ten minutes still produces one dot per bulletin.
+
+It will not run past the event. When the bulletin calls the system a low
+pressure area or a remnant, or nothing new arrives for `--stale-hours` (12 by
+default), it sets `status: ended` and every later run exits 4. The page then
+holds its last state. Remove `data/observations.json`, or pass `--force`, to
+reopen.
+
+## Files
+
+- `data/observations.json`: the record. One entry per bulletin, with the
+  position, the issue time, the intensity and the time it was fetched.
+- `../resilience.html`: the page. The marker block sits between
+  `<!-- akvan:start -->` and `<!-- akvan:end -->` and is regenerated whole on
+  each run, so the page never accumulates stale fragments.
+
+## Before a new season
+
+Point `SOURCES` at the season's bulletin URLs, change `event` in
+`data/observations.json`, and update the bounding box in `SANITY` if the basin
+is not the Bay of Bengal. The forecast anchor `(fx, fy)` in `redraw()` is the
+only hard-coded geography and should be moved to the new landfall area.
+
+## Publishing
+
+The page is static and stays static. What makes it live is one small file:
+
+- `resilience/events/akvan.html` is the page
+- `resilience/data/observations.json` is the record the poller writes
+
+Upload both, keeping that structure, and the page will check the record on load
+and every ten minutes. When the record carries a newer bulletin than the page
+was built with, the marker, the dots, the track, the label and the Position card
+redraw themselves in the browser. If the fetch fails, the page keeps the
+position it was published with, so a dead network never shows a blank map.
+
+The poller writes to `resilience/data/observations.json` for that reason. Nothing
+else needs to be regenerated when a bulletin lands.
+
+## Keeping every fix
+
+The record in `data/observations.json` is the source of truth, and the page is
+only a drawing of it. Two rules keep the track whole once the storm is over:
+
+1. **Append, never overwrite.** Each poll adds one entry per bulletin it can
+   verify. Nothing is deleted, and a fix is never replaced by a later one.
+2. **Export at every run.** `python3 tools/export_track.py` writes
+   `data/<event>-track.csv` from the record and reports any gap longer than
+   four hours. Run it after every poll and once more when the event closes.
+
+Why this matters: the tracks on the Arnab and Murasu pages carry six and eleven
+fixes, because they were drawn by hand from the bulletins that were quoted in
+the press, not from a running record. A three-hourly storm over five days has
+thirty to forty fixes. Akvan's record starts on 15 November and every one of
+them is kept.
+
+IMD's post-event report carries the full track table for each storm. When those
+reports are published for Arnab and Murasu, their records can be rebuilt from
+the table rather than from news reports, and their pages redrawn.
+
+## When a system is named or reclassified
+
+IMD confers a name when a depression becomes a cyclonic storm, and then changes
+the descriptor as the storm strengthens: cyclonic, severe cyclonic, very severe
+cyclonic, extremely severe. The name stays; the words in front of it change.
+Each of those is one fact living in three places, so all three change together
+or the suite contradicts itself:
+
+1. **The event page** title, `resilience/events/<event>.html`, from the
+   designation to the name. Keep the standfirst as it is.
+2. **The index page**, `resilience/index.html`, where the live row in the EVENTS
+   card names the event and links to the page. This is the one that gets
+   forgotten, because it is a different file from the one being edited. It
+   carries the full descriptor, so it reads "Severe Cyclonic Storm Akvan" once
+   IMD says so, not "Cyclone Akvan".
+3. **The record**, `data/observations.json`: the `named` block for the name, and
+   the `intensity` of each fix for the descriptor, which changes bulletin by
+   bulletin.
+
+A live row is dated "since <day>", not with a closed range, until the event ends.
+
+## After landfall
+
+Landfall is the moment the centre crosses, not the end of the storm. Half the
+system is still at sea, the rear eyewall has not come ashore, and the heaviest
+rain and the highest water often arrive after the crossing. So:
+
+- The page stays live until the rear of the system has cleared the coast or the
+  storm has weakened inland. Log that moment separately:
+  `python3 tools/postevent.py --cleared "<ISO time>" --where "<where the rear was>"`.
+- Keep satellite frames at three points, not one: at landfall, about six hours
+  later as the rear bands come ashore, and at clearance.
+  `python3 tools/fetch_image.py --keep landfall`, then `--keep landfall-after`,
+  then `--keep cleared`.
+- Figures gathered before clearance are recorded with `phase: provisional`. They
+  will move, and often upward. Once clearance is logged, later entries are
+  `settled`.
+
+The live page answers "where is it". Once the storm crosses, the questions change:
+how many died, how many were in shelters, what crop was lost, how much rain fell,
+when the power came back. Those arrive over days, from many sources, and are
+worth keeping for the record.
+
+    python3 tools/postevent.py --landfall "2026-11-20T11:30+05:30" --where "between Nellore and Tuni"
+    python3 tools/postevent.py --add deaths --value 12 --source "State relief commissioner, 21 Nov" --note "all in Nellore district"
+    python3 tools/postevent.py --show
+
+Entries are appended with their source and the time they were found, never
+overwritten, in `data/<event>-postevent.json`.
+
+**Keep the picture.** A satellite frame near landfall is the one image that
+cannot be fetched again later, because IMD overwrites its own. At landfall, and
+again a few hours either side, keep a permanent copy:
+
+    python3 tools/fetch_image.py --keep landfall
+
+That writes `data/satellite/akvan-landfall-<date>.jpg` beside the working frame
+and names it in `latest.json`.
